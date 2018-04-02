@@ -20,7 +20,7 @@ wriggleon = 0
 
 
 
-logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(message)s %(threadName)s %(funcName)s', level=logging.DEBUG, )
+logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s', level=logging.DEBUG, )
 
 
 wiggle = 0
@@ -30,6 +30,7 @@ def fat_controller():
     threading.Timer( (60), fat_controller).start()  # called every 2 minutes
 
     global wiggle
+    global wriggleon
     lowerbound = 300  # min seconds: 5 mins
     upperbound = 600  # max seconds: 10 mins
 
@@ -73,10 +74,13 @@ def fat_controller():
         logging.debug("this is the fat controller.")
         logging.debug("Buddha, it is time to act.")
         wiggle = 1
+        logging.debug("wriggleon is " + str(wriggleon))
 
     else:
         wiggle = 0
         logging.debug("Buddha, be calm. Peace comes from within. Do not seek it without.")
+        logging.debug("wriggleon is " + str(wriggleon))
+
     logging.debug(wiggle)
     sleep(2)
 
@@ -91,6 +95,7 @@ def wiggler ():
     global wiggle
     global wriggleon
     threading.Timer((60), wiggler).start()  # called every minute
+    logging.debug("wriggleon is now" + str(wriggleon))
 
     if wriggleon is 0:
 

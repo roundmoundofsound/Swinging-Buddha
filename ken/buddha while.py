@@ -20,7 +20,7 @@ wriggleon = 0
 
 
 
-logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(message)s %(threadName)s %(funcName)s', level=print, )
+logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s ', level=logging.DEBUG, )
 
 
 wiggle = 0
@@ -72,11 +72,15 @@ def fat_controller():
     if (int(seconds_gap) in range(lowerbound, upperbound) or int(nextseconds_gap) in range(lowerbound, upperbound)):
         print("this is the fat controller.")
         print("Buddha, it is time to act.")
+        print("wriggleon is now" + str(wriggleon))
+
         wiggle = 1
 
     else:
         wiggle = 0
         print("Buddha, be calm. Peace comes from within. Do not seek it without.")
+        print("wriggleon is now" + str(wriggleon))
+
     print(wiggle)
     sleep(2)
 
@@ -91,6 +95,8 @@ def wiggler ():
     global wiggle
     global wriggleon
     threading.Timer((60), wiggler).start()  # called every minute
+
+    print("wriggleon is now "  + str(wriggleon))
 
     if wriggleon is 0:
 
@@ -123,6 +129,7 @@ def wiggler ():
             wriggleon = 0
             print (time.strftime("%a, %d %b %Y %H:%M:%S "))
             print ("Buddha is still.")
+            print("wriggleon is now "  + str(wriggleon))
 
 
 

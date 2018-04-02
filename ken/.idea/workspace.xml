@@ -25,9 +25,11 @@
       <file leaf-file-name="buddha.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buddha.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-101">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="278">
+              <caret line="22" column="111" lean-forward="false" selection-start-line="22" selection-start-column="111" selection-end-line="22" selection-end-column="111" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,8 +93,8 @@
       <file leaf-file-name="buddha while.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/buddha while.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2880">
-              <caret line="192" column="5" lean-forward="false" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
+            <state relative-caret-position="245">
+              <caret line="22" column="111" lean-forward="false" selection-start-line="22" selection-start-column="111" selection-end-line="22" selection-end-column="111" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -145,12 +147,14 @@
       <find>#GPIO</find>
       <find>print</find>
       <find>GPIO</find>
+      <find>logging.debug(</find>
+      <find>wriggleon</find>
     </findStrings>
     <replaceStrings>
-      <replace>print</replace>
       <replace>GPIO</replace>
       <replace>logging.debug</replace>
       <replace>#GPIO</replace>
+      <replace>print</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -234,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.buddha copy">
+  <component name="RunManager" selected="Python.buddha while">
     <configuration default="false" name="buddha while" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -398,10 +402,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.buddha copy" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testbuddha" />
-        <item index="2" class="java.lang.String" itemvalue="Python.buddha" />
-        <item index="3" class="java.lang.String" itemvalue="Python.buddha while" />
+        <item index="0" class="java.lang.String" itemvalue="Python.buddha while" />
+        <item index="1" class="java.lang.String" itemvalue="Python.buddha copy" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testbuddha" />
+        <item index="3" class="java.lang.String" itemvalue="Python.buddha" />
         <item index="4" class="java.lang.String" itemvalue="Python.buddhamotor" />
       </list>
     </recent_temporary>
@@ -813,8 +817,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/buddha while.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2880">
-          <caret line="192" column="5" lean-forward="false" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
+        <state relative-caret-position="245">
+          <caret line="22" column="111" lean-forward="false" selection-start-line="22" selection-start-column="111" selection-end-line="22" selection-end-column="111" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
@@ -823,9 +827,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/buddha.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-101">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="278">
+          <caret line="22" column="111" lean-forward="false" selection-start-line="22" selection-start-column="111" selection-end-line="22" selection-end-column="111" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

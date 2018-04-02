@@ -4596,3 +4596,10 @@
 2018-04-02 14:49:21,323 DEBUG    2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds fat_controller
 2018-04-02 14:49:21,323 DEBUG    Buddha, be calm. Peace comes from within. Do not seek it without. fat_controller
 2018-04-02 14:49:21,323 DEBUG    0 fat_controller
+2018-04-02 20:35:04,276 DEBUG    wriggleon is now0 MainThread fat_controller
+2018-04-02 20:35:21,283 DEBUG    wriggleon is now0 MainThread wiggler
+2018-04-02 20:36:04,236 DEBUG    wriggleon is now0 Thread-1 fat_controller
+2018-04-02 20:36:21,288 DEBUG    wriggleon is now0 Thread-2 wiggler
+2018-04-02 20:37:04,433 DEBUG    wriggleon is now0 Thread-3 fat_controller
+2018-04-02 20:37:21,294 DEBUG    wriggleon is now0 Thread-4 wiggler
+2018-04-02 20:37:47,037 DEBUG    wriggleon is now0 MainThread fat_controller
