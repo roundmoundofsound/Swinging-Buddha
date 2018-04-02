@@ -16,7 +16,7 @@ import json
 
 Motor = 16
 Light = 18
-
+wriggleon = 0
 
 
 
@@ -26,10 +26,8 @@ logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-
 wiggle = 0
 
 
-
-
 def fat_controller():
- #   threading.Timer( (60), fat_controller).start()  # called every 2 minutes
+    threading.Timer( (60), fat_controller).start()  # called every 2 minutes
 
     global wiggle
     lowerbound = 300  # min seconds: 5 mins
@@ -57,6 +55,7 @@ def fat_controller():
     else:
         nextnext_train_utc = datetime.datetime.strptime(nextnext_train['estimated_departure_utc'], "%Y-%m-%dT%H:%M:%SZ")
 
+    print("it is  " + str(time.strftime("%a, %d %b %Y %H:%M:%S"))
     print("utc now is " + str(gestalt))
     print("next train at " + str(next_train_utc))
     print("next train after that is at " + str(nextnext_train_utc))
@@ -80,6 +79,7 @@ def fat_controller():
     sleep(2)
 
 
+
 def wiggler ():
     #GPIO.setmode(#GPIO.BOARD)
     #GPIO.setup(Motor, #GPIO.OUT)
@@ -87,41 +87,40 @@ def wiggler ():
     #GPIO.setwarnings(False)
 
     global wiggle
+    global wriggleon
+    threading.Timer((60), wiggler).start()  # called every minute
 
-    #threading.Timer( (60), wiggler).start()  # called every minute
-
-
-    while wiggle is 1:
-        on = 1
-        #sleep(2)
-        print(wiggle)
-        print ("Buddha is excited")
-        #GPIO.output(Motor, #GPIO.ON)  # on
-        #GPIO.output(Light, #GPIO.ON)  # on
-
-        print("feel the force, buddha. magnet on.")
-        threadsopen = threading.active_count()
-        print (threadsopen)
-
-        sleep(.72)
-
-        #GPIO.output(Motor, #GPIO.LOW)  # off
-        #GPIO.output(Light, #GPIO.lOW)  # off
+    if wriggleon is 0:
 
 
-        print("magnet off.")
+        while wiggle is 1:
+            wriggleon = 1
+            #sleep(2)
+            print ("wiggle is " + str(wiggle))
 
-        sleep(1.8)
+            #GPIO.output(Motor, #GPIO.ON)  # on
+            #GPIO.output(Light, #GPIO.ON)  # on
+
+            print("feel the force, buddha. magnet on.")
+            threadsopen = threading.active_count()
+            print (str(threadsopen) + " threads open")
+
+            sleep(.72)
+
+            #GPIO.output(Motor, #GPIO.LOW)  # off
+            #GPIO.output(Light, #GPIO.lOW)  # off
 
 
-    else:
-        print(wiggle)
-        print ("Buddha is still.")
-        sleep(60)
-        fat_controller()
+            print("magnet off.")
+
+            sleep(1.8)
 
 
-
+        else:
+            print(wiggle)
+            wriggleon = 0
+            print (time.strftime("%a, %d %b %Y %H:%M:%S "))
+            print ("Buddha is still.")
 
 
 
@@ -129,12 +128,10 @@ def rain():
 
     threading.Timer( (900), rain).start()  # called every 15 mins
 
-
     response = urlopen('http://api.wunderground.com/api/135a2b023c32d48a/hourly/q/au/melbourne.json').read().decode('utf8')
     wholething = json.loads(response)
 
     rainwords = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
-
 
     forecasts = wholething["hourly_forecast"]
 
@@ -186,8 +183,8 @@ def rain():
 
 
 fat_controller()
-# sleep(15)
-# wiggler()
+sleep(15)
+wiggler()
 # sleep (15)
 #rain()
 
