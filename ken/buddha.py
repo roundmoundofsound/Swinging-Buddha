@@ -16,16 +16,14 @@ import json
 
 Motor = 16
 Light = 18
+wriggleon = 0
 
 
 
-
-logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(message)s %(funcName)s', level=logging.DEBUG, )
+logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(message)s %(threadName)s %(funcName)s', level=logging.DEBUG, )
 
 
 wiggle = 0
-
-
 
 
 def fat_controller():
@@ -57,14 +55,17 @@ def fat_controller():
     else:
         nextnext_train_utc = datetime.datetime.strptime(nextnext_train['estimated_departure_utc'], "%Y-%m-%dT%H:%M:%SZ")
 
+    logging.debug("it is  " + str(time.strftime("%a, %d %b %Y %H:%M:%S")))
     logging.debug("utc now is " + str(gestalt))
     logging.debug("next train at " + str(next_train_utc))
     logging.debug("next train after that is at " + str(nextnext_train_utc))
     seconds_gap = (next_train_utc - gestalt).total_seconds()
     nextseconds_gap = (nextnext_train_utc - gestalt).total_seconds()
-
+    minutes_gap = seconds_gap/60
+    nextminutesgap = nextseconds_gap/60
     logging.debug("next train gap is " + str(seconds_gap) + " seconds")
-    logging.debug("train after that gap is " + str(nextseconds_gap) + " seconds")
+    logging.debug("next train gap is " + str(minutes_gap) + " minutes")
+    logging.debug("train after that gap is " + str(nextminutesgap) + " minutes")
     logging.debug('2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds')
 
 
@@ -77,6 +78,7 @@ def fat_controller():
         wiggle = 0
         logging.debug("Buddha, be calm. Peace comes from within. Do not seek it without.")
     logging.debug(wiggle)
+    sleep(2)
 
 
 
@@ -87,38 +89,40 @@ def wiggler ():
     GPIO.setwarnings(False)
 
     global wiggle
+    global wriggleon
+    threading.Timer((60), wiggler).start()  # called every minute
 
-    threading.Timer( (60), wiggler).start()  # called every minute
-
-
-    while wiggle is 1:
-        #sleep(2)
-        logging.debug(wiggle)
-        logging.debug ("Buddha is excited")
-        GPIO.output(Motor, GPIO.ON)  # on
-        GPIO.output(Light, GPIO.ON)  # on
-
-        logging.debug("feel the force, buddha. magnet on.")
-        threadsopen = threading.active_count()
-        logging.debug (threadsopen)
-
-        sleep(.72)
-
-        GPIO.output(Motor, GPIO.LOW)  # off
-        GPIO.output(Light, GPIO.lOW)  # off
+    if wriggleon is 0:
 
 
-        logging.debug("magnet off.")
+        while wiggle is 1:
+            wriggleon = 1
+            #sleep(2)
+            logging.debug ("wiggle is " + str(wiggle))
 
-        sleep(1.8)
+            GPIO.output(Motor, GPIO.ON)  # on
+            GPIO.output(Light, GPIO.ON)  # on
+
+            logging.debug("feel the force, buddha. magnet on.")
+            threadsopen = threading.active_count()
+            logging.debug (str(threadsopen) + " threads open")
+
+            sleep(.72)
+
+            GPIO.output(Motor, GPIO.LOW)  # off
+            GPIO.output(Light, GPIO.lOW)  # off
 
 
+            logging.debug("magnet off.")
 
-    else:
-        logging.debug(wiggle)
-        logging.debug ("Buddha is still.")
+            sleep(1.8)
 
 
+        else:
+            logging.debug(wiggle)
+            wriggleon = 0
+            logging.debug (time.strftime("%a, %d %b %Y %H:%M:%S "))
+            logging.debug ("Buddha is still.")
 
 
 
@@ -126,12 +130,10 @@ def rain():
 
     threading.Timer( (900), rain).start()  # called every 15 mins
 
-
     response = urlopen('http://api.wunderground.com/api/135a2b023c32d48a/hourly/q/au/melbourne.json').read().decode('utf8')
     wholething = json.loads(response)
 
     rainwords = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
-
 
     forecasts = wholething["hourly_forecast"]
 
@@ -185,7 +187,7 @@ def rain():
 fat_controller()
 sleep(15)
 wiggler()
-sleep (15)
+# sleep (15)
 #rain()
 
 GPIO.cleanup()
