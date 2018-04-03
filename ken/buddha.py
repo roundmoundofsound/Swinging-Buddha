@@ -57,9 +57,9 @@ def fat_controller():
         nextnext_train_utc = datetime.datetime.strptime(nextnext_train['estimated_departure_utc'], "%Y-%m-%dT%H:%M:%SZ")
 
     logging.debug("it is  " + str(time.strftime("%a, %d %b %Y %H:%M:%S")))
-    logging.debug("utc now is " + str(gestalt))
-    logging.debug("next train at " + str(next_train_utc))
-    logging.debug("next train after that is at " + str(nextnext_train_utc))
+    #logging.debug("utc now is " + str(gestalt))
+    #logging.debug("next train at " + str(next_train_utc))
+   # logging.debug("next train after that is at " + str(nextnext_train_utc))
     seconds_gap = (next_train_utc - gestalt).total_seconds()
     nextseconds_gap = (nextnext_train_utc - gestalt).total_seconds()
     minutes_gap = seconds_gap/60
@@ -81,21 +81,21 @@ def fat_controller():
         logging.debug("Buddha, be calm. Peace comes from within. Do not seek it without.")
         logging.debug("wriggleon is " + str(wriggleon))
 
-    logging.debug(wiggle)
+    logging.debug("wiggle is " + str(wiggle))
     sleep(2)
 
 
 
 def wiggler ():
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(Motor, GPIO.OUT)
-    GPIO.setup(Light, GPIO.OUT)
+    GPIO.setup(Motor,GPIO.OUT)
+    GPIO.setup(Light,GPIO.OUT)
     GPIO.setwarnings(False)
 
     global wiggle
     global wriggleon
     threading.Timer((60), wiggler).start()  # called every minute
-    logging.debug("wriggleon is now" + str(wriggleon))
+    logging.debug("wriggleon is now " + str(wriggleon))
 
     if wriggleon is 0:
 
@@ -105,8 +105,8 @@ def wiggler ():
             #sleep(2)
             logging.debug ("wiggle is " + str(wiggle))
 
-            GPIO.output(Motor, GPIO.ON)  # on
-            GPIO.output(Light, GPIO.ON)  # on
+            GPIO.output(Motor,GPIO.ON)  # on
+            GPIO.output(Light,GPIO.ON)  # on
 
             logging.debug("feel the force, buddha. magnet on.")
             threadsopen = threading.active_count()
@@ -114,8 +114,8 @@ def wiggler ():
 
             sleep(.72)
 
-            GPIO.output(Motor, GPIO.LOW)  # off
-            GPIO.output(Light, GPIO.lOW)  # off
+            GPIO.output(Motor,GPIO.OFF)  # off
+            GPIO.output(Light,GPIO.OFF)  # off
 
 
             logging.debug("magnet off.")
