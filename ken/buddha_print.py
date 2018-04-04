@@ -20,7 +20,7 @@ wriggleon = 0
 
 
 
-logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s', level=logging.DEBUG, )
+#logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s', level=print, )
 
 
 wiggle = 0
@@ -56,32 +56,32 @@ def fat_controller():
     else:
         nextnext_train_utc = datetime.datetime.strptime(nextnext_train['estimated_departure_utc'], "%Y-%m-%dT%H:%M:%SZ")
 
-    logging.debug("it is  " + str(time.strftime("%a, %d %b %Y %H:%M:%S")))
-    #logging.debug("utc now is " + str(gestalt))
-    #logging.debug("next train at " + str(next_train_utc))
-   # logging.debug("next train after that is at " + str(nextnext_train_utc))
+    print("it is  " + str(time.strftime("%a, %d %b %Y %H:%M:%S")))
+    #print("utc now is " + str(gestalt))
+    #print("next train at " + str(next_train_utc))
+   # print("next train after that is at " + str(nextnext_train_utc))
     seconds_gap = (next_train_utc - gestalt).total_seconds()
     nextseconds_gap = (nextnext_train_utc - gestalt).total_seconds()
     minutes_gap = seconds_gap/60
     nextminutesgap = nextseconds_gap/60
-    logging.debug("next train gap is " + str(seconds_gap) + " seconds")
-    logging.debug("next train gap is " + str(minutes_gap) + " minutes")
-    logging.debug("train after that gap is " + str(nextminutesgap) + " minutes")
-    logging.debug('2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds')
+    print("next train gap is " + str(seconds_gap) + " seconds")
+    print("next train gap is " + str(minutes_gap) + " minutes")
+    print("train after that gap is " + str(nextminutesgap) + " minutes")
+    print('2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds')
 
 
     if (int(seconds_gap) in range(lowerbound, upperbound) or int(nextseconds_gap) in range(lowerbound, upperbound)):
-        logging.debug("this is the fat controller.")
-        logging.debug("Buddha, it is time to act.")
+        print("this is the fat controller.")
+        print("Buddha, it is time to act.")
         wiggle = 1
-        logging.debug("wriggleon is " + str(wriggleon))
+        print("wriggleon is " + str(wriggleon))
 
     else:
         wiggle = 0
-        logging.debug("Buddha, be calm. Peace comes from within. Do not seek it without.")
-        logging.debug("wriggleon is " + str(wriggleon))
+        print("Buddha, be calm. Peace comes from within. Do not seek it without.")
+        print("wriggleon is " + str(wriggleon))
 
-    logging.debug("wiggle is " + str(wiggle))
+    print("wiggle is " + str(wiggle))
     sleep(2)
 
 
@@ -95,7 +95,7 @@ def wiggler ():
     global wiggle
     global wriggleon
     threading.Timer((60), wiggler).start()  # called every minute
-    logging.debug("wriggleon is now" + str(wriggleon))
+    print("wriggleon is now" + str(wriggleon))
 
     if wriggleon is 0:
 
@@ -103,14 +103,14 @@ def wiggler ():
         while wiggle is 1:
             wriggleon = 1
             #sleep(2)
-            logging.debug ("wiggle is " + str(wiggle))
+            print ("wiggle is " + str(wiggle))
 
             GPIO.output(Motor,GPIO.HIGH)  # on
             GPIO.output(Light,GPIO.LOW)  # on
 
-            logging.debug("feel the force, buddha. magnet on.")
+            print("feel the force, buddha. magnet on.")
             threadsopen = threading.active_count()
-            logging.debug (str(threadsopen) + " threads open")
+            print (str(threadsopen) + " threads open")
 
             sleep(.72)
 
@@ -118,18 +118,18 @@ def wiggler ():
             GPIO.output(Light,GPIO.LOW)  # off
 
 
-            logging.debug("magnet off.")
+            print("magnet off.")
 
             sleep(1.8)
 
 
         else:
-            logging.debug(wiggle)
+            print(wiggle)
             wriggleon = 0
-            logging.debug (time.strftime("%a, %d %b %Y %H:%M:%S "))
-            logging.debug ("Buddha is still.")
+            print (time.strftime("%a, %d %b %Y %H:%M:%S "))
+            print ("Buddha is still.")
 
-
+    print (time.strftime("%a, %d %b %Y %H:%M:%S ") +"wriggleon is " +str(wriggleon) +". I need it to be zero to wiggle, so I am exiting. No need for a new thread.")
 
 def rain():
 
@@ -155,35 +155,35 @@ def rain():
 
 
 # stupid
-    logging.debug(condit_hr1)
-    logging.debug(condit_hr2)
-    logging.debug(condit_hr3)
+    print(condit_hr1)
+    print(condit_hr2)
+    print(condit_hr3)
 
 
 # terrible
     if condit_hr1 in rainwords:
-        logging.debug("pack an umbrella")
+        print("pack an umbrella")
     else:
-     logging.debug("dry")
+     print("dry")
 
     if condit_hr2 in rainwords:
-        logging.debug("pack an umbrella")
+        print("pack an umbrella")
     else:
-        logging.debug("dry")
+        print("dry")
 
     if condit_hr3 in rainwords:
-     logging.debug("pack an umbrella")
+     print("pack an umbrella")
     else:
-        logging.debug("dry")
+        print("dry")
 
     if (condit_hr1 in rainwords) or (condit_hr2 in rainwords) or (condit_hr3 in rainwords):
-        logging.debug("gonna rain, light up")
+        print("gonna rain, light up")
        # GPIO.output(Light, GPIO.HIGH)  # on
 
 
 
     else:
-        logging.debug("light off. Its dry.")
+        print("light off. Its dry.")
        # GPIO.output(Light, GPIO.LOW)  # off
 
 
