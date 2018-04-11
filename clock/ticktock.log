@@ -1,0 +1,29 @@
+2018-04-11 12:49:55,448 DEBUG    MainThread fat_controller it is  Wed, 11 Apr 2018 12:49:55
+2018-04-11 12:49:55,449 DEBUG    MainThread fat_controller next train gap is 605.167434 seconds
+2018-04-11 12:49:55,449 DEBUG    MainThread fat_controller next train gap is 10.086123899999999 minutes
+2018-04-11 12:49:55,450 DEBUG    MainThread fat_controller train after that gap is 31.0861239 minutes
+2018-04-11 12:49:55,450 DEBUG    MainThread fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-11 12:49:55,450 DEBUG    MainThread fat_controller Clock, do not light up..
+2018-04-11 12:49:55,450 DEBUG    MainThread fat_controller wriggleon is 0
+2018-04-11 12:49:55,450 DEBUG    MainThread fat_controller wiggle is 0
+2018-04-11 12:50:12,457 DEBUG    MainThread wiggler wriggleon is now0
+2018-04-11 12:50:12,457 DEBUG    MainThread wiggler 0
+2018-04-11 12:50:12,458 DEBUG    MainThread wiggler Wed, 11 Apr 2018 12:50:12 
+2018-04-11 12:50:12,458 DEBUG    MainThread wiggler Buddha is still.
+2018-04-11 12:50:12,458 DEBUG    MainThread wiggler Wed, 11 Apr 2018 12:50:12 wriggleon is 0. I need it to be zero to wiggle, so I am exiting. No need for a new thread.
+2018-04-11 12:50:27,967 DEBUG    MainThread rain 13
+2018-04-11 12:50:27,979 DEBUG    MainThread rain 13
+2018-04-11 12:50:27,979 DEBUG    MainThread rain 13
+2018-04-11 12:50:27,979 DEBUG    MainThread rain pack an umbrella
+2018-04-11 12:50:27,979 DEBUG    MainThread rain pack an umbrella
+2018-04-11 12:50:27,979 DEBUG    MainThread rain pack an umbrella
+2018-04-11 12:50:27,979 DEBUG    MainThread rain gonna rain, light up
+2018-04-11 12:50:55,051 DEBUG    Thread-1 fat_controller it is  Wed, 11 Apr 2018 12:50:55
+2018-04-11 12:50:55,051 DEBUG    Thread-1 fat_controller next train gap is 545.16244 seconds
+2018-04-11 12:50:55,051 DEBUG    Thread-1 fat_controller next train gap is 9.086040666666666 minutes
+2018-04-11 12:50:55,051 DEBUG    Thread-1 fat_controller train after that gap is 30.08604066666667 minutes
+2018-04-11 12:50:55,052 DEBUG    Thread-1 fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-11 12:50:55,052 DEBUG    Thread-1 fat_controller this is the fat controller.
+2018-04-11 12:50:55,052 DEBUG    Thread-1 fat_controller light, it is time to act.
+2018-04-11 12:50:55,052 DEBUG    Thread-1 fat_controller wriggleon is 0
+2018-04-11 12:50:55,052 DEBUG    Thread-1 fat_controller wiggle is 1

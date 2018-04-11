@@ -3,12 +3,12 @@ from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
 
-Motor = 16
-Light = 18
+rainlight = 8
+trainlight = 12
 
 
-GPIO.setup(Motor, GPIO.OUT)
-GPIO.setup(Light, GPIO.OUT)
+GPIO.setup(rainlight, GPIO.OUT)
+GPIO.setup(trainlight, GPIO.OUT)
 
 
 
