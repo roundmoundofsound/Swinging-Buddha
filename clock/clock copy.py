@@ -29,8 +29,8 @@ wriggleon = 0
 
 
 
-#logging.basicConfig(filename= "ticktock.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s', level=print, )
-
+logging.basicConfig(filename= "ticktock.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s', level=logging.DEBUG, )
+logger = logging.getLogger()
 
 wiggle = 0
 
@@ -101,43 +101,44 @@ def wiggler ():
     #GPIO.setup(trainlight,#GPIO.OUT)
     #GPIO.setwarnings(False)
 
+
     global wiggle
     global wriggleon
+
+
     threading.Timer((60), wiggler).start()  # called every minute
-    print("wriggleon is now" + str(wriggleon))
+    print("wriggleon is now " + str(wriggleon))
 
     if wriggleon is 0:
 
+        try:
 
-        while wiggle is 1:
-            wriggleon = 1
-            #sleep(2)
-            print ("wiggle is " + str(wiggle) + " light is on")
-
-            #GPIO.output(trainlight,#GPIO.HIGH)  # on
-
-            sleep(10)
-
-           # print("feel the force, buddha. light on.")
-            #threadsopen = threading.active_count()
-            #print (str(threadsopen) + " threads open")
+            while wiggle is 1:
+                wriggleon = 1
+                print ("wiggle is " + str(wiggle) + " light is on")
+                sleep(10)
 
 
+            else:
+                print(wiggle)
+                wriggleon = 0
+                print (time.strftime("%a, %d %b %Y %H:%M:%S "))
+                print ("Wiggler says light is off.")
 
-        else:
-            print(wiggle)
-            wriggleon = 0
-            #GPIO.output(trainlight,#GPIO.LOW)  # off
-            print (time.strftime("%a, %d %b %Y %H:%M:%S "))
-            print ("Wiggler says light is off.")
 
-    print (time.strftime("%a, %d %b %Y %H:%M:%S ") +"wriggleon is " +str(wriggleon) +". I need it to be zero to wiggle, so I am exiting. No need for a new thread.")
+
+        except Exception as e:
+                logging.exception("message")
+
+    else:
+        print(time.strftime("%a, %d %b %Y %H:%M:%S ") + "wriggleon is " + str(wriggleon) + ". I need it to be zero to wiggle, so I am exiting. No need for a new thread.")
+
 
 def rain():
 
-    threading.Timer( (60), rain).start()  # called every 15 mins
+    threading.Timer( (60), rain).start()  # called every 1 mins
 
-    response = urlopen('http://api.wunderground.com/api/135a2b023c32d48a/hourly/q/uk/London.json').read().decode('utf8')
+    response = urlopen('http://api.wunderground.com/api/135a2b023c32d48a/hourly/q/au/Mackay.json').read().decode('utf8')
     wholething = json.loads(response)
 
     rainwords = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
