@@ -1,0 +1,30 @@
+2018-04-12 21:09:15,831 DEBUG    MainThread fat_controller it is  Thu, 12 Apr 2018 21:09:15
+2018-04-12 21:09:15,834 DEBUG    MainThread fat_controller next train gap is 766.746742 seconds
+2018-04-12 21:09:15,836 DEBUG    MainThread fat_controller next train gap is 12.779112366666668 minutes
+2018-04-12 21:09:15,838 DEBUG    MainThread fat_controller train after that gap is 43.779112366666666 minutes
+2018-04-12 21:09:15,841 DEBUG    MainThread fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-12 21:09:15,843 DEBUG    MainThread fat_controller Clock, do not light up the trainlight..
+2018-04-12 21:09:15,846 DEBUG    MainThread fat_controller wriggleon is 0
+2018-04-12 21:09:15,847 DEBUG    MainThread fat_controller wiggle is 0
+2018-04-12 21:09:32,869 DEBUG    MainThread wiggler wriggleon is now 0
+2018-04-12 21:09:48,989 DEBUG    MainThread rain 1
+2018-04-12 21:09:49,017 DEBUG    MainThread rain 1
+2018-04-12 21:09:49,019 DEBUG    MainThread rain 1
+2018-04-12 21:09:49,022 DEBUG    MainThread rain dry
+2018-04-12 21:09:49,024 DEBUG    MainThread rain dry
+2018-04-12 21:09:49,025 DEBUG    MainThread rain dry
+2018-04-12 21:09:49,027 DEBUG    MainThread rain Rain light off. Its dry.
+2018-04-12 21:10:17,746 DEBUG    Thread-1 fat_controller it is  Thu, 12 Apr 2018 21:10:17
+2018-04-12 21:10:17,748 DEBUG    Thread-1 fat_controller next train gap is 706.731766 seconds
+2018-04-12 21:10:17,751 DEBUG    Thread-1 fat_controller next train gap is 11.778862766666666 minutes
+2018-04-12 21:10:17,753 DEBUG    Thread-1 fat_controller train after that gap is 42.77886276666666 minutes
+2018-04-12 21:10:17,756 DEBUG    Thread-1 fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-12 21:10:17,758 DEBUG    Thread-1 fat_controller Clock, do not light up the trainlight..
+2018-04-12 21:10:17,760 DEBUG    Thread-1 fat_controller wriggleon is 0
+2018-04-12 21:10:17,762 DEBUG    Thread-1 fat_controller wiggle is 0
+2018-04-12 21:10:32,877 DEBUG    Thread-2 wiggler wriggleon is now 0
+2018-04-12 21:22:41,531 ERROR    MainThread wiggler message
+Traceback (most recent call last):
+  File "/Volumes/Home Directory/clock/clock copy.py", line 126, in wiggler
+    GPIO.output(trainlight, GPIO.LOW)  # off
+NameError: name 'GPIO' is not defined

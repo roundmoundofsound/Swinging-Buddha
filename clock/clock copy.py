@@ -123,6 +123,8 @@ def wiggler ():
                 print(wiggle)
                 wriggleon = 0
                 print (time.strftime("%a, %d %b %Y %H:%M:%S "))
+     #           GPIO.output(trainlight, GPIO.LOW)  # off
+
                 print ("Wiggler says light is off.")
 
 
