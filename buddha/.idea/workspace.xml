@@ -11,25 +11,15 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="clock" />
+    <favorites_list name="buddha" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scratch.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <file leaf-file-name="buddha.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/buddha.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13665">
-              <caret line="911" column="1" lean-forward="false" selection-start-line="911" selection-start-column="1" selection-end-line="911" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clock.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clock.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-89">
-              <caret line="93" column="15" lean-forward="false" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
+            <state relative-caret-position="1830">
+              <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -37,12 +27,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clock no exceptions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clock no exceptions.py">
+      <file leaf-file-name="buddha copy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/buddha copy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="128" column="25" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="175">
+              <caret line="135" column="9" lean-forward="false" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,31 +45,31 @@
     <findStrings>
       <find>logging.debug</find>
       <find>print</find>
-      <find>logger</find>
+      <find>clock</find>
+      <find>GPIO</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
       <replace>logging.debug</replace>
+      <replace>#GPIO</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/buddha_print.py" />
-        <option value="$PROJECT_DIR$/buddhamotor.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-        <option value="$PROJECT_DIR$/clock copy.py" />
-        <option value="$PROJECT_DIR$/clock.py" />
+        <option value="$PROJECT_DIR$/buddha.py" />
+        <option value="$PROJECT_DIR$/buddha copy.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="815" />
+    <option name="height" value="827" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -91,21 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clock" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clock" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -113,19 +90,32 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="clock">
+            <PATH_ELEMENT USER_OBJECT="buddha">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buddha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buddha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="TEXT" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -139,8 +129,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.clock copy">
-    <configuration default="false" name="clock copy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.buddha copy">
+    <configuration default="false" name="buddha copy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -152,7 +142,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="buddha" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clock copy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buddha copy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -223,11 +213,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.clock copy" />
+      <item index="0" class="java.lang.String" itemvalue="Python.buddha copy" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.clock copy" />
+        <item index="0" class="java.lang.String" itemvalue="Python.buddha copy" />
       </list>
     </recent_temporary>
   </component>
@@ -257,9 +247,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1440" height="815" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="827" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28183118" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2639485" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -287,117 +278,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+    <entry file="file://$PROJECT_DIR$/buddha.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13665">
-          <caret line="911" column="1" lean-forward="false" selection-start-line="911" selection-start-column="1" selection-end-line="911" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock no exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="128" column="25" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="138" column="94" lean-forward="false" selection-start-line="138" selection-start-column="94" selection-end-line="138" selection-end-column="94" />
+        <state relative-caret-position="1830">
+          <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+    <entry file="file://$PROJECT_DIR$/buddha copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13665">
-          <caret line="911" column="1" lean-forward="false" selection-start-line="911" selection-start-column="1" selection-end-line="911" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="1665">
+          <caret line="135" column="9" lean-forward="true" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="91" lean-forward="false" selection-start-line="138" selection-start-column="91" selection-end-line="138" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buddha.py" />
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buddha.py" />
     <entry file="file://$PROJECT_DIR$/buddha_print.py" />
     <entry file="file://$PROJECT_DIR$/buddhamotor.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -410,38 +310,32 @@
     <entry file="file://$PROJECT_DIR$/buddhamotor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="32" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buddha.py" />
-    <entry file="file://$PROJECT_DIR$/clock copy.py">
+    <entry file="file://$PROJECT_DIR$/buddha_print.py" />
+    <entry file="file://$PROJECT_DIR$/buddhamotor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="125" column="6" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+    <entry file="file://$PROJECT_DIR$/buddha.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13665">
-          <caret line="911" column="1" lean-forward="false" selection-start-line="911" selection-start-column="1" selection-end-line="911" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="1830">
+          <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clock no exceptions.py">
+    <entry file="file://$PROJECT_DIR$/buddha copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="128" column="25" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
-          <caret line="93" column="15" lean-forward="false" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
+        <state relative-caret-position="175">
+          <caret line="135" column="9" lean-forward="false" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

@@ -1,13 +1,12 @@
 import threading
 
+
+import RPi.GPIO as GPIO
+
 import time
 from time import sleep
 
 import logging
-logging.basicConfig(filename= "ticktock.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s', level=logging.DEBUG, )
-logger = logging.getLogger(__name__)
-
-
 from urllib.request import urlopen
 
 
@@ -15,20 +14,16 @@ import datetime
 import urllib.request
 import json
 
-import RPi.GPIO as GPIO
-from time import sleep
+Motor = 16
+Light = 18
+wriggleon = 0
 
 
 
-rainlight = 8
-trainlight = 12
+logging.basicConfig(filename= "dharmalog.log", format='%(asctime)s %(levelname)-8s %(threadName)s %(funcName)s %(message)s', level=logging.DEBUG, )
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(rainlight, GPIO.OUT)
-GPIO.setup(trainlight, GPIO.OUT)
 
 wiggle = 0
-wriggleon = 0
 
 
 def fat_controller():
@@ -77,13 +72,13 @@ def fat_controller():
 
     if (int(seconds_gap) in range(lowerbound, upperbound) or int(nextseconds_gap) in range(lowerbound, upperbound)):
         logging.debug("this is the fat controller.")
-        logging.debug("light, it is time to act.")
+        logging.debug("Buddha, it is time to act.")
         wiggle = 1
         logging.debug("wriggleon is " + str(wriggleon))
 
     else:
         wiggle = 0
-        logging.debug("Clock, do not light up the trainlight..")
+        logging.debug("Buddha, be calm. Peace comes from within. Do not seek it without.")
         logging.debug("wriggleon is " + str(wriggleon))
 
     logging.debug("wiggle is " + str(wiggle))
@@ -92,51 +87,55 @@ def fat_controller():
 
 
 def wiggler ():
-    threading.Timer((60), wiggler).start()  # called every minute
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(rainlight,GPIO.OUT)
-    GPIO.setup(trainlight,GPIO.OUT)
+    GPIO.setup(Motor,GPIO.OUT)
+    GPIO.setup(Light,GPIO.OUT)
     GPIO.setwarnings(False)
-    logging.debug("wriggler is running. ")
+
     global wiggle
     global wriggleon
-
-
-    logging.debug("wriggleon is now " + str(wriggleon))
+    threading.Timer((60), wiggler).start()  # called every minute
+    logging.debug("wriggleon is now" + str(wriggleon))
 
     if wriggleon is 0:
 
-        try:
 
-            while wiggle is 1:
-                wriggleon = 1
-                logging.debug("wiggle is " + str(wiggle) + " light is on")
-                GPIO.output(trainlight, GPIO.HIGH)  # on
+        while wiggle is 1:
+            wriggleon = 1
+            #sleep(2)
+            logging.debug ("wiggle is " + str(wiggle))
 
-                sleep(10)
+            GPIO.output(Motor,GPIO.HIGH)  # on
+            GPIO.output(Light,GPIO.LOW)  # on
+
+            logging.debug("feel the force, buddha. magnet on.")
+            threadsopen = threading.active_count()
+            logging.debug (str(threadsopen) + " threads open")
+
+            sleep(.72)
+
+            GPIO.output(Motor,GPIO.HIGH)  # off
+            GPIO.output(Light,GPIO.LOW)  # off
 
 
-            else:
-                logging.debug(wiggle)
-                wriggleon = 0
-                logging.debug(time.strftime("%a, %d %b %Y %H:%M:%S "))
-                GPIO.output(trainlight, GPIO.LOW)  # on
-                logging.debug("Wiggler says light is off.")
+            logging.debug("magnet off.")
+
+            sleep(1.8)
 
 
+        else:
+            logging.debug(wiggle)
+            wriggleon = 0
+            logging.debug (time.strftime("%a, %d %b %Y %H:%M:%S "))
+            logging.debug ("Buddha is still.")
 
-        except Exception as e:
-            logging.exception("message")
-
-    else:
-        logging.debug(time.strftime("%a, %d %b %Y %H:%M:%S ") + "wriggleon is " + str(
-            wriggleon) + ". I need it to be zero to wiggle, so I am exiting. No need for a new thread.")
 
 
 def rain():
-    threading.Timer((600), rain).start()  # called every 10 mins
-    logging.debug("rain function is running. ")
-    response = urlopen('http://api.wunderground.com/api/135a2b023c32d48a/hourly/q/au/Melbourne.json').read().decode('utf8')
+
+    threading.Timer( (900), rain).start()  # called every 15 mins
+
+    response = urlopen('http://api.wunderground.com/api/135a2b023c32d48a/hourly/q/au/melbourne.json').read().decode('utf8')
     wholething = json.loads(response)
 
     rainwords = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
@@ -149,7 +148,7 @@ def rain():
 
     hour2 = (forecasts[1])
     condit_hr2 = int(hour2["fctcode"])
-    
+
     hour3 = (forecasts[2])
     condit_hr3 = int(hour3["fctcode"])
 
@@ -178,14 +177,14 @@ def rain():
         logging.debug("dry")
 
     if (condit_hr1 in rainwords) or (condit_hr2 in rainwords) or (condit_hr3 in rainwords):
-        logging.debug("gonna rain, light up the rain light")
-        GPIO.output(rainlight, GPIO.HIGH)  # on
+        logging.debug("gonna rain, light up")
+       # GPIO.output(Light, GPIO.HIGH)  # on
 
 
 
     else:
-        logging.debug("Rain light off. Its dry.")
-        GPIO.output(rainlight, GPIO.LOW)  # off
+        logging.debug("light off. Its dry.")
+       # GPIO.output(Light, GPIO.LOW)  # off
 
 
 
@@ -193,7 +192,7 @@ def rain():
 fat_controller()
 sleep(15)
 wiggler()
-sleep (15)
-rain()
+# sleep (15)
+#rain()
 
 GPIO.cleanup()
