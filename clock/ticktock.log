@@ -1,0 +1,105 @@
+2018-04-20 10:21:01,635 DEBUG    MainThread fat_controller it is  Fri, 20 Apr 2018 10:21:01
+2018-04-20 10:21:01,638 DEBUG    MainThread fat_controller next train gap is 60.422787 seconds
+2018-04-20 10:21:01,639 DEBUG    MainThread fat_controller next train gap is 1.00704645 minutes
+2018-04-20 10:21:01,641 DEBUG    MainThread fat_controller train after that gap is 19.99037978333333 minutes
+2018-04-20 10:21:01,643 DEBUG    MainThread fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-20 10:21:01,645 DEBUG    MainThread fat_controller Clock, do not light up the trainlight..
+2018-04-20 10:21:01,646 DEBUG    MainThread fat_controller wriggleon is 0
+2018-04-20 10:21:01,648 DEBUG    MainThread fat_controller wiggle is 0
+2018-04-20 10:21:18,670 DEBUG    MainThread wiggler wiggler function is running. 
+2018-04-20 10:21:18,673 DEBUG    MainThread wiggler wriggleon is now 0
+2018-04-20 10:21:18,675 DEBUG    MainThread wiggler 0
+2018-04-20 10:21:18,678 DEBUG    MainThread wiggler Fri, 20 Apr 2018 10:21:18 
+2018-04-20 10:21:18,680 DEBUG    MainThread wiggler Wiggler says light is off.
+2018-04-20 10:21:33,701 DEBUG    MainThread rain rain function is running. 
+2018-04-20 10:21:34,201 DEBUG    MainThread rain 1
+2018-04-20 10:21:34,204 DEBUG    MainThread rain 1
+2018-04-20 10:21:34,208 DEBUG    MainThread rain 1
+2018-04-20 10:21:34,210 DEBUG    MainThread rain dry
+2018-04-20 10:21:34,212 DEBUG    MainThread rain dry
+2018-04-20 10:21:34,215 DEBUG    MainThread rain dry
+2018-04-20 10:21:34,217 DEBUG    MainThread rain Rain light off. Its dry.
+2018-04-20 10:22:01,090 DEBUG    Thread-1 fat_controller it is  Fri, 20 Apr 2018 10:22:01
+2018-04-20 10:22:01,092 DEBUG    Thread-1 fat_controller next train gap is 1139.414924 seconds
+2018-04-20 10:22:01,095 DEBUG    Thread-1 fat_controller next train gap is 18.99024873333333 minutes
+2018-04-20 10:22:01,097 DEBUG    Thread-1 fat_controller train after that gap is 38.99024873333334 minutes
+2018-04-20 10:22:01,100 DEBUG    Thread-1 fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-20 10:22:01,102 DEBUG    Thread-1 fat_controller Clock, do not light up the trainlight..
+2018-04-20 10:22:01,106 DEBUG    Thread-1 fat_controller wriggleon is 0
+2018-04-20 10:22:01,108 DEBUG    Thread-1 fat_controller wiggle is 0
+2018-04-20 10:22:18,677 DEBUG    Thread-2 wiggler wiggler function is running. 
+2018-04-20 10:22:18,679 DEBUG    Thread-2 wiggler wriggleon is now 0
+2018-04-20 10:22:18,682 DEBUG    Thread-2 wiggler 0
+2018-04-20 10:22:18,685 DEBUG    Thread-2 wiggler Fri, 20 Apr 2018 10:22:18 
+2018-04-20 10:22:18,687 ERROR    Thread-2 wiggler an exception happened
+Traceback (most recent call last):
+  File "clock.py", line 127, in wiggler
+    GPIO.output(trainlight, GPIO.LOW)  # on
+RuntimeError: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2018-04-20 10:23:00,858 DEBUG    Thread-4 fat_controller it is  Fri, 20 Apr 2018 10:23:00
+2018-04-20 10:23:00,860 DEBUG    Thread-4 fat_controller next train gap is 1019.394696 seconds
+2018-04-20 10:23:00,863 DEBUG    Thread-4 fat_controller next train gap is 16.9899116 minutes
+2018-04-20 10:23:00,866 DEBUG    Thread-4 fat_controller train after that gap is 37.9899116 minutes
+2018-04-20 10:23:00,868 DEBUG    Thread-4 fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-20 10:23:00,871 DEBUG    Thread-4 fat_controller Clock, do not light up the trainlight..
+2018-04-20 10:23:00,873 DEBUG    Thread-4 fat_controller wriggleon is 0
+2018-04-20 10:23:00,875 DEBUG    Thread-4 fat_controller wiggle is 0
+2018-04-20 10:23:18,687 DEBUG    Thread-5 wiggler wiggler function is running. 
+2018-04-20 10:23:18,689 DEBUG    Thread-5 wiggler wriggleon is now 0
+2018-04-20 10:23:18,691 DEBUG    Thread-5 wiggler 0
+2018-04-20 10:23:18,694 DEBUG    Thread-5 wiggler Fri, 20 Apr 2018 10:23:18 
+2018-04-20 10:23:18,697 ERROR    Thread-5 wiggler an exception happened
+Traceback (most recent call last):
+  File "clock.py", line 127, in wiggler
+    GPIO.output(trainlight, GPIO.LOW)  # on
+RuntimeError: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2018-04-20 10:25:50,518 DEBUG    MainThread fat_controller it is  Fri, 20 Apr 2018 10:25:50
+2018-04-20 10:25:50,521 DEBUG    MainThread fat_controller next train gap is 850.11491 seconds
+2018-04-20 10:25:50,522 DEBUG    MainThread fat_controller next train gap is 14.168581833333333 minutes
+2018-04-20 10:25:50,526 DEBUG    MainThread fat_controller train after that gap is 35.16858183333333 minutes
+2018-04-20 10:25:50,528 DEBUG    MainThread fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-20 10:25:50,530 DEBUG    MainThread fat_controller Clock, do not light up the trainlight..
+2018-04-20 10:25:50,531 DEBUG    MainThread fat_controller wriggleon is 0
+2018-04-20 10:25:50,533 DEBUG    MainThread fat_controller wiggle is 0
+2018-04-20 10:26:07,547 DEBUG    MainThread wiggler wiggler function is running. 
+2018-04-20 10:26:07,549 DEBUG    MainThread wiggler wriggleon is now 0
+2018-04-20 10:26:07,552 DEBUG    MainThread wiggler 0
+2018-04-20 10:26:07,566 DEBUG    MainThread wiggler Fri, 20 Apr 2018 10:26:07 
+2018-04-20 10:26:07,573 DEBUG    MainThread wiggler Wiggler says light is off.
+2018-04-20 10:26:22,597 DEBUG    MainThread rain rain function is running. 
+2018-04-20 10:26:23,072 DEBUG    MainThread rain 1
+2018-04-20 10:26:23,075 DEBUG    MainThread rain 1
+2018-04-20 10:26:23,077 DEBUG    MainThread rain 1
+2018-04-20 10:26:23,079 DEBUG    MainThread rain dry
+2018-04-20 10:26:23,082 DEBUG    MainThread rain dry
+2018-04-20 10:26:23,085 DEBUG    MainThread rain dry
+2018-04-20 10:26:23,089 DEBUG    MainThread rain Rain light off. Its dry.
+2018-04-20 10:26:50,471 DEBUG    Thread-1 fat_controller it is  Fri, 20 Apr 2018 10:26:50
+2018-04-20 10:26:50,473 DEBUG    Thread-1 fat_controller next train gap is 790.101857 seconds
+2018-04-20 10:26:50,475 DEBUG    Thread-1 fat_controller next train gap is 13.168364283333334 minutes
+2018-04-20 10:26:50,476 DEBUG    Thread-1 fat_controller train after that gap is 34.16836428333333 minutes
+2018-04-20 10:26:50,480 DEBUG    Thread-1 fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-20 10:26:50,482 DEBUG    Thread-1 fat_controller Clock, do not light up the trainlight..
+2018-04-20 10:26:50,483 DEBUG    Thread-1 fat_controller wriggleon is 0
+2018-04-20 10:26:50,485 DEBUG    Thread-1 fat_controller wiggle is 0
+2018-04-20 10:27:00,666 DEBUG    MainThread fat_controller it is  Fri, 20 Apr 2018 10:27:00
+2018-04-20 10:27:00,668 DEBUG    MainThread fat_controller next train gap is 780.090875 seconds
+2018-04-20 10:27:00,670 DEBUG    MainThread fat_controller next train gap is 13.001514583333334 minutes
+2018-04-20 10:27:00,672 DEBUG    MainThread fat_controller train after that gap is 34.00151458333333 minutes
+2018-04-20 10:27:00,673 DEBUG    MainThread fat_controller 2 minutes is 120 seconds, 5 minutes is 300 seconds, 10 minutes is 600 seconds, 20 minutes is 1200 seconds
+2018-04-20 10:27:00,675 DEBUG    MainThread fat_controller Clock, do not light up the trainlight..
+2018-04-20 10:27:00,677 DEBUG    MainThread fat_controller wriggleon is 0
+2018-04-20 10:27:00,679 DEBUG    MainThread fat_controller wiggle is 0
+2018-04-20 10:27:17,704 DEBUG    MainThread wiggler wiggler function is running. 
+2018-04-20 10:27:17,706 DEBUG    MainThread wiggler wriggleon is now 0
+2018-04-20 10:27:17,708 DEBUG    MainThread wiggler 0
+2018-04-20 10:27:17,709 DEBUG    MainThread wiggler Fri, 20 Apr 2018 10:27:17 
+2018-04-20 10:27:17,711 DEBUG    MainThread wiggler Wiggler says light is off.
+2018-04-20 10:27:32,735 DEBUG    MainThread rain rain function is running. 
+2018-04-20 10:27:33,315 DEBUG    MainThread rain 1
+2018-04-20 10:27:33,318 DEBUG    MainThread rain 1
+2018-04-20 10:27:33,321 DEBUG    MainThread rain 1
+2018-04-20 10:27:33,328 DEBUG    MainThread rain dry
+2018-04-20 10:27:33,331 DEBUG    MainThread rain dry
+2018-04-20 10:27:33,333 DEBUG    MainThread rain dry
+2018-04-20 10:27:33,339 DEBUG    MainThread rain Rain light off. Its dry.

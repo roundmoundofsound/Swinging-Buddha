@@ -124,7 +124,7 @@ def wiggler ():
 
             print("magnet off.")
 
-            sleep(2.1)
+            sleep(2)
 
 
         else:
